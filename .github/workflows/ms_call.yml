@@ -12,5 +12,7 @@ jobs:
         token: ${{ secrets.ACTION_TOKEN }}
         #path: reusable-workflow-repo
     - name: Ejecutar script desde el repositorio clonado
+      env:
+        SCRIPT_VAR: ${{ secrets.SCRIPT_VAR }}
       run: |
-        bash my_script.sh "Hola bb"
+        bash my_script.sh $SCRIPT_VAR
