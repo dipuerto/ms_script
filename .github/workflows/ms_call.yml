@@ -10,6 +10,7 @@ jobs:
       with:
         repository: dipuerto/scripting_test
         token: ${{ secrets.ACTION_TOKEN }}
+        ref: develop
         #path: reusable-workflow-repo
     - name: Ejecutar script desde el repositorio clonado
       env:
